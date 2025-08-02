@@ -123,6 +123,21 @@ export default function App() {
           <MyButton buttonText="Shared Counter 2" count={count} onClick={() => setCount(count + 1)} />
         </div>
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         <p className="read-the-docs">
           Click on the Vite and React logos to learn more
         </p>
