@@ -141,4 +141,68 @@
   padding: 0.5rem 0;
   color: white;
   font-size: 1rem;
+}
+
+.counters-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #2a2f3a;
+  border-radius: 8px;
+  border: 1px solid #4a4f5b;
+}
+
+.counters-section h2 {
+  color: #61dafb;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.counters-section button {
+  margin: 0.5rem;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.counters-section button:hover {
+  border-color: #646cff;
+}
+
+.shared-counters-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #2a2f3a;
+  border-radius: 8px;
+  border: 1px solid #4a4f5b;
+}
+
+.shared-counters-section h2 {
+  color: #61dafb;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.shared-counters-section button {
+  margin: 0.5rem;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.shared-counters-section button:hover {
+  border-color: #646cff;
 } 

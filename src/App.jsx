@@ -5,9 +5,26 @@ export default function App() {
   const [count, setCount] = useState(0)
 
   // All functions grouped together
-  function MyButton() {
+  function MyButton({ buttonText, count, onClick }) {
+    // If count and onClick are provided, use shared state
+    if (count !== undefined && onClick) {
+      return (
+        <button onClick={onClick}>
+          {buttonText || "Button"} Clicked {count} times
+        </button>
+      );
+    }
+    
+    // Otherwise, use independent state
+    const [localCount, setLocalCount] = useState(0);
+    function handleClick() {
+      setLocalCount(localCount + 1);
+    }
+
     return (
-      <button>I am the BEST button in the WORLD</button>
+      <button onClick={handleClick}>
+        {buttonText || "I am the BEST button in the WORLD!"} Clicked {localCount} times
+      </button>
     );
   }
 
@@ -45,17 +62,23 @@ export default function App() {
   };
 
   const products = [
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
+    { title: 'Cabbage', isFruit: false, id: 1 },
+    { title: 'Garlic', isFruit: false, id: 2 },
+    { title: 'Apple', isFruit: true, id: 3 },
   ];
 
   const listItems = products.map(product =>
-    <li key={product.id}>
+    <li
+      key={product.id}
+      style={{
+        color: product.isFruit ? 'magenta' : 'darkgreen'
+      }}
+    >
       {product.title}
     </li>
   );
 
+  
   // Main return statement
   return (
     <div className="App">
@@ -86,6 +109,18 @@ export default function App() {
         <div className="list-section">
           <h2>Products List:</h2>
           <ul>{listItems}</ul>
+        </div>
+        
+        <div className="counters-section">
+          <h2>Counters that update separately</h2>
+          <MyButton buttonText="First Counter" />
+          <MyButton buttonText="Second Counter" />
+        </div>
+        
+        <div className="shared-counters-section">
+          <h2>Counters that update together</h2>
+          <MyButton buttonText="Shared Counter 1" count={count} onClick={() => setCount(count + 1)} />
+          <MyButton buttonText="Shared Counter 2" count={count} onClick={() => setCount(count + 1)} />
         </div>
         
         <p className="read-the-docs">
