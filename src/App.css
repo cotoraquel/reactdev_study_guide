@@ -205,4 +205,56 @@
 
 .shared-counters-section button:hover {
   border-color: #646cff;
+}
+
+.tic-tac-toe-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #2a2f3a;
+  border-radius: 8px;
+  border: 1px solid #4a4f5b;
+}
+
+.tic-tac-toe-section h2 {
+  color: #61dafb;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.status {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  background: #1a1a1a;
+  border: 2px solid #4a4f5b;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 60px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 60px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.square:hover {
+  background-color: #2a2f3a;
+}
+
+.square:focus {
+  outline: none;
+  border-color: #646cff;
 } 
