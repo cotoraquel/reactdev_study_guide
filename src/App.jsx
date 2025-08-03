@@ -31,7 +31,7 @@ export default function App() {
   function AboutPage() {
     return (
       <>
-        <h1>About</h1>
+        <h1>Proof of React skills</h1>
         <p>Hello there.<br /> How do you do my friend?</p>
       </>
     );
